@@ -10,4 +10,8 @@ public interface IntList {
     int length();
 
     String toString();
+
+    void addInt(int n);
+
+    IntList concat(IntList list);
 }

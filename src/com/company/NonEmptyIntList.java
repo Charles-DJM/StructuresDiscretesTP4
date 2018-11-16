@@ -24,11 +24,27 @@ public class NonEmptyIntList implements IntList{
 
     @Override
     public IntList cons(int n) {
-        return null;
+        return new NonEmptyIntList(n, this);
     }
 
     @Override
     public int length() {
-        return 0;
+       return 1 + queue.length();
+    }
+
+    @Override
+    public String toString(){
+        return this.element +  queue.toString();
+    }
+
+    @Override
+    public void addInt(int n) {
+        this.element += n;
+        queue.addInt(n);
+    }
+
+    @Override
+    public IntList concat(IntList list) {
+        return queue;
     }
 }

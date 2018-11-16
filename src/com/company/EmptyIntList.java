@@ -9,16 +9,27 @@ public class EmptyIntList  implements IntList{
 
     @Override
     public String toString() {
-        return "[]";
+        return "]";
     }
 
     @Override
     public IntList cons(int n) {
-        return
+        return new NonEmptyIntList(n, this);
     }
 
     @Override
     public int length() {
         return 0;
     }
+
+    @Override
+    public void addInt(int n) {
+
+    }
+
+    @Override
+    public IntList concat(IntList list) {
+        return null;
+    }
+
 }
