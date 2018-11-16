@@ -29,7 +29,7 @@ public class EmptyIntList  implements IntList{
 
     @Override
     public IntList concat(IntList list) {
-        return null;
+        return list;
     }
 
 }

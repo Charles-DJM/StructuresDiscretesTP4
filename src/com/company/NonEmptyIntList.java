@@ -45,6 +45,6 @@ public class NonEmptyIntList implements IntList{
 
     @Override
     public IntList concat(IntList list) {
-
+        return new NonEmptyIntList(this.element, this.queue.concat(list));
     }
 }
