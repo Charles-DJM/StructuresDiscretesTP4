@@ -2,19 +2,19 @@ package com.company;
 
 public class NonEmptyIntList implements IntList{
     private int element;
-    private IntList queue;
+    private IntList tail;
 
     public NonEmptyIntList(int element, IntList queue) {
         this.element = element;
-        this.queue = queue;
+        this.tail = queue;
     }
 
     public int getElement() {
         return element;
     }
 
-    public IntList getQueue() {
-        return queue;
+    public IntList getTail() {
+        return tail;
     }
 
     @Override
@@ -29,22 +29,22 @@ public class NonEmptyIntList implements IntList{
 
     @Override
     public int length() {
-       return 1 + queue.length();
+       return 1 + tail.length();
     }
 
     @Override
     public String toString(){
-        return this.element +  queue.toString();
+        return this.element +  tail.toString();
     }
 
     @Override
     public void addInt(int n) {
         this.element += n;
-        queue.addInt(n);
+        tail.addInt(n);
     }
 
     @Override
     public IntList concat(IntList list) {
-        return new NonEmptyIntList(this.element, this.queue.concat(list));
+        return new NonEmptyIntList(this.element, this.tail.concat(list));
     }
 }
