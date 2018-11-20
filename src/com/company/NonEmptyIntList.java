@@ -4,9 +4,9 @@ public class NonEmptyIntList implements IntList{
     private int element;
     private IntList tail;
 
-    public NonEmptyIntList(int element, IntList queue) {
+    public NonEmptyIntList(int element, IntList tail) {
         this.element = element;
-        this.tail = queue;
+        this.tail = tail;
     }
 
     public int getElement() {
