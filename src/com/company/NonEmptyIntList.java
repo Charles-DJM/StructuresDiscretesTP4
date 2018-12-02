@@ -1,5 +1,7 @@
 package com.company;
 
+import javax.crypto.ExemptionMechanism;
+
 public class NonEmptyIntList implements IntList{
     private int element;
     private IntList tail;
@@ -50,6 +52,13 @@ public class NonEmptyIntList implements IntList{
 
     @Override
     public IntList clone(){
+        if(tail.isEmpty()){
+            return new NonEmptyIntList(this.element, new EmptyIntList());
+        }
 
+        else{
+            IntList newList = tail.clone();
+            return new NonEmptyIntList(this.element, newList);
+        }
     }
 }

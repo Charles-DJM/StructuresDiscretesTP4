@@ -34,7 +34,7 @@ public class EmptyIntList  implements IntList{
 
     @Override
     public IntList clone(){
-
+        return this;
     }
 
 }
