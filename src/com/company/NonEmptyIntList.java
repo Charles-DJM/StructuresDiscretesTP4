@@ -88,7 +88,13 @@ public class NonEmptyIntList implements IntList{
 
     @Override
     public boolean set(int val, int pos){
-        if(pos == )
+        if(pos == 1){
+            this.element = val;
+            return true;
+        }
+        else{
+            return this.tail.set(val, pos-1);
+        }
     }
 }
 

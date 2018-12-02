@@ -56,4 +56,9 @@ public class EmptyIntList  implements IntList{
         return false;
     }
 
+    @Override
+    public boolean set(int val, int pos){
+        return false;
+    }
+
 }
