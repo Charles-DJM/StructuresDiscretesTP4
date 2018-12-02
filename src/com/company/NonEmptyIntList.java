@@ -96,6 +96,26 @@ public class NonEmptyIntList implements IntList{
             return this.tail.set(val, pos-1);
         }
     }
+
+    @Override
+    public boolean remove(int pos){
+        if(pos == 1){
+            if(this.tail.isEmpty()){
+                return false;
+            }
+            this.element = this.tail.getElement();
+            this.tail = this.tail.getTail();
+            return true;
+        }
+        if(pos == 2){
+            if(this.tail.isEmpty()){
+                return false;
+            }
+            this.tail = this.tail.getTail();
+            return true;
+        }
+        return this.tail.remove(pos-1);
+    }
 }
 
 

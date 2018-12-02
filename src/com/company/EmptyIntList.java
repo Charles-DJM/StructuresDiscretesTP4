@@ -43,7 +43,7 @@ public class EmptyIntList  implements IntList{
     }
 
     public IntList getTail(){
-        return null;
+        throw new NullPointerException();
     }
 
     @Override
@@ -58,6 +58,11 @@ public class EmptyIntList  implements IntList{
 
     @Override
     public boolean set(int val, int pos){
+        return false;
+    }
+
+    @Override
+    public boolean remove(int pos){
         return false;
     }
 

@@ -43,4 +43,10 @@ public interface IntList {
      * @return
      */
     boolean set(int val, int pos);
+
+    /** @param pos la position de la suppression
+     * @return
+     */
+    boolean remove(int pos);
+
 }
