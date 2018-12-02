@@ -36,7 +36,7 @@ public class NonEmptyIntList implements IntList{
 
     @Override
     public String toString(){
-        return this.element +  tail.toString();
+        return this.element+ " " +  tail.toString();
     }
 
     @Override
