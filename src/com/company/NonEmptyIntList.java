@@ -47,4 +47,9 @@ public class NonEmptyIntList implements IntList{
     public IntList concat(IntList list) {
         return new NonEmptyIntList(this.element, this.tail.concat(list));
     }
+
+    @Override
+    public IntList clone(){
+
+    }
 }

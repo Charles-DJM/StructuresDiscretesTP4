@@ -11,7 +11,18 @@ public interface IntList {
 
     String toString();
 
+    /** @param n l’entier à ajouter aux éléments de la liste
+     * @return
+     */
     void addInt(int n);
 
+    /** @param list la liste à concaténer
+     * @return la concaténation de this et list
+     */
     IntList concat(IntList list);
+
+    /**
+     * @return une copie de la liste
+     */
+    IntList clone();
 }

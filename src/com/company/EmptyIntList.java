@@ -32,4 +32,9 @@ public class EmptyIntList  implements IntList{
         return list;
     }
 
+    @Override
+    public IntList clone(){
+
+    }
+
 }
