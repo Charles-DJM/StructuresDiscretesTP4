@@ -37,4 +37,9 @@ public class EmptyIntList  implements IntList{
         return this;
     }
 
+    @Override
+    public int getElement(){
+        throw new NullPointerException();
+    }
+
 }

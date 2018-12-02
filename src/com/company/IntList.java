@@ -25,4 +25,8 @@ public interface IntList {
      * @return une copie de la liste
      */
     IntList clone();
+
+    boolean equals(IntList list);
+
+    int getElement();
 }
