@@ -51,4 +51,9 @@ public class EmptyIntList  implements IntList{
         return list.isEmpty();
     }
 
+    @Override
+    public boolean add(int val, int pos){
+        return false;
+    }
+
 }

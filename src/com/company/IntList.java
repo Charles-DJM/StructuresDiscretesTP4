@@ -31,4 +31,16 @@ public interface IntList {
     int getElement();
 
     IntList getTail();
+
+    /** @param val la valeur à insérer
+     * @param pos la position de l’insertion
+     * @return
+     */
+    boolean add(int val, int pos);
+
+    /** @param val la valeur à mettre en position pos
+     * @param pos la position de la mise à jour
+     * @return
+     */
+    boolean set(int val, int pos);
 }

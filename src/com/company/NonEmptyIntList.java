@@ -69,4 +69,27 @@ public class NonEmptyIntList implements IntList{
         }
         return false;
     }
+
+    @Override
+    public boolean add(int val, int pos){
+        if(pos == 1){
+            IntList newElement = new NonEmptyIntList(this.element, this.tail);
+            this.element = val;
+            this.tail = newElement;
+            return true;
+        }
+        if(pos == 2){
+            IntList newElement = new NonEmptyIntList(val, this.tail);
+            this.tail = newElement;
+            return true;
+        }
+        return this.tail.add(val, pos-1);
+    }
+
+    @Override
+    public boolean set(int val, int pos){
+        if(pos == )
+    }
 }
+
+
