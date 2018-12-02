@@ -42,4 +42,13 @@ public class EmptyIntList  implements IntList{
         throw new NullPointerException();
     }
 
+    public IntList getTail(){
+        return null;
+    }
+
+    @Override
+    public boolean equals(IntList list){
+        return list.isEmpty();
+    }
+
 }

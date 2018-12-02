@@ -29,4 +29,6 @@ public interface IntList {
     boolean equals(IntList list);
 
     int getElement();
+
+    IntList getTail();
 }

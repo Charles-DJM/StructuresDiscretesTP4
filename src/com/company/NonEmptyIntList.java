@@ -65,6 +65,8 @@ public class NonEmptyIntList implements IntList{
     @Override
     public boolean equals(IntList list){
         if(!list.isEmpty()){
-            return (this.element == list.getElement()) && this.tail.equals(list);        }
+            return (this.element == list.getElement()) && this.tail.equals(list.getTail());
+        }
+        return false;
     }
 }
